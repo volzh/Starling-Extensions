@@ -60,7 +60,7 @@ package starling.extensions.tweener
 		public function stop():void
 		{
 			_currentTween = this;
-			Starling.juggler.add(_currentTween);
+			Starling.juggler.remove(_currentTween);
 			for (var i:int = 0; i < _parallelTweens.length; i++) 
 			{
 				_parallelTweens[i].stop();
